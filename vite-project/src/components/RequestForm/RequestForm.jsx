@@ -53,7 +53,7 @@ export default function RequestForm({ onClose }) {
           </>
         ) : (
           <>
-            <h2>📬 Request Received!</h2>
+            <h2>Request Received!</h2>
             <p>Thanks for suggesting a book. We'll look into it!</p>
             <button onClick={onClose}>Close</button>
           </>
