@@ -2,13 +2,13 @@ import { useState } from "react"
 import Header from './components/Header';
 import './scss/main.scss';
 import { fetchBooks } from "./services/bookService";
-import BookGrid from "./components/BookGrid";
+import BookGrid from "./components/BookGrid/BookGrid";
 import Modal from "./components/Modal";
 import RequestForm from "./components/RequestForm";
 import { useEffect } from "react";
 
 function App() {
-  const [books, setBooks] = useState([]);
+  const [books, setBooks] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [selectBook, setSelectBook] = useState(null);
@@ -55,7 +55,7 @@ function App() {
   {showRequestForm && <RequestForm onClose={() => setShowRequestForm(false)} />}
   {loading && <p style={{textAlign: 'center'}}>Loading...</p>}
   {error && <p style={{color: 'red', textAlign: 'center'}}>{error}</p>}
-  {!loading && books.length === 0 && (
+  {!loading && books && books.length === 0 && (
     <p style={{ textAlign: 'center', marginTop: '2rem' }}>
       No books found. Try a different search.
     </p>

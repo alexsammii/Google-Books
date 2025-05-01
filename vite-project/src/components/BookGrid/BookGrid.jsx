@@ -1,4 +1,4 @@
-import BookCard from "./Bookcard";
+import BookCard from "../BookCard/BookCard";
 import classes from './BookGrid.module.scss';
 
 export default function BookGrid({ books, onBookClick }) {
