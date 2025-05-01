@@ -1,10 +1,10 @@
 import { useState } from "react"
-import Header from './components/Header';
+import Header from './components/Header/Header';
 import './scss/main.scss';
 import { fetchBooks } from "./services/bookService";
 import BookGrid from "./components/BookGrid/BookGrid";
-import Modal from "./components/Modal";
-import RequestForm from "./components/RequestForm";
+import Modal from "./components/Modal/Modal";
+import RequestForm from "./components/RequestForm/RequestForm";
 import { useEffect } from "react";
 
 function App() {
